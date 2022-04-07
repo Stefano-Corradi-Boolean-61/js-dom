@@ -1,0 +1,33 @@
+
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.blue{
+  color:blue;
+}
+
+.upper{
+  text-transform: uppercase;
+}
+
+.pink{
+  color: pink;
+}
+
+
+.underline{
+  text-decoration: underline;
+}
+
+.box{
+  background-color: brown;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+.hide{
+  display: none;
+}
