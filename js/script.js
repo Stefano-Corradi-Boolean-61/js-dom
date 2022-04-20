@@ -74,26 +74,34 @@ btn3.addEventListener('click', function(){
 });
 
 
-btnStartQuestion.addEventListener('click',function(){
-  // richiedo il genere
-  let genere = prompt('maschio o femmina?');
-  // trasformando la stringa in minuscolo elimino il problema del case sensitive
-  genere = genere.toLowerCase();
-  // chiedo il nome
-  const nome = prompt('Come ti chiami?');
+btnStartQuestion.addEventListener('click',startQuestion);
 
-  console.log(genere, nome);
-  //stampo azzurro se maschio e rosa se femmina
-  const output = document.querySelector('.maschio-femmina');
 
-  // scrivo il testo
-  output.innerHTML = "Ciao " + nome + "!";
 
-  // aggiungo la classe
-  if(genere === 'femmina'){
-    output.classList.add('pink');
-  } else if(genere === 'maschio'){
-    output.classList.add('blue');
-  }
+function startQuestion(){
+   // richiedo il genere
+   let genere = prompt('maschio o femmina?');
+   // trasformando la stringa in minuscolo elimino il problema del case sensitive
+   genere = genere.toLowerCase();
+   // chiedo il nome
+   const nome = prompt('Come ti chiami?');
+ 
+   console.log(genere, nome);
+   //stampo azzurro se maschio e rosa se femmina
+   const output = document.querySelector('.maschio-femmina');
+ 
+   // scrivo il testo
+   output.innerHTML = "Ciao " + nome + "!";
+ 
+   // aggiungo la classe
+   if(genere === 'femmina'){
+    addClassToOutput(output,'pink');
+   } else if(genere === 'maschio'){
+    addClassToOutput(output,'blue');
+   }
+}
 
-});
+
+function addClassToOutput(element, classToAdd){
+  element.classList.add(classToAdd);
+}
